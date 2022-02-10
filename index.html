@@ -29,31 +29,21 @@
   </header>
 
     <main>
-
-      <br>
-
-      <section>
-        <h4>Ingrese precio en dólares</h4>
-        <div>
-          <input id="precio-online" type="number" placeholder="Precio en dólares" class="form-control">
+      <section class="div-container">
+        <div class="compras">
+          <h4>Compra online</h4>
+          <input id="precio-online" type="number" placeholder="Precio en dólares">
           <button id="calcular-online" type="submit" class="btn btn-success">Compra Online</button>
+          <article class="article article-online"></article>
         </div>
 
-        <section>
-          <article class="article-online"></article>
-        </section>
-  
-        <br>
-
-        <h4>Ingrese precio en pesos</h4>
-        <div>
-          <input id="precio-steam" type="number" placeholder="Precio en pesos" class="form-control">
+        <div class="compras">
+          <h4>Compra Steam</h4>
+          <input id="precio-steam" type="number" placeholder="Precio en pesos">
           <button id="calcular-steam" type="submit" class="btn btn-success">Compra Steam</button>
-        </div> 
-      </section>
+          <article class="article article-steam"></article>
+        </div>
 
-      <section>
-        <article class="article-steam"></article>
       </section>
 
     </main>
