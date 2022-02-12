@@ -1,0 +1,66 @@
+main{
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top: 1rem;
+    div{
+        margin-top: 1rem;
+        div{
+            article{
+                margin: 0;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+h1,h2{
+    font-size: 1.5rem;
+}
+
+label{
+    color: rgb(54, 54, 54);
+}
+
+.form-control, .input-group{
+    width: 30rem;
+    height: 3rem;
+}
+
+.span-dolar{
+    background-color: rgba(8, 143, 8, 0.486);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.span-pesos{
+    background-color: lightblue;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+#panel-pesos, #flip {
+    background-color: lightblue;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+  
+#panel-pesos {
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#panel-dolares, #flip {
+    background-color: rgba(8, 143, 8, 0.486);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+  
+#panel-dolares {
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
