@@ -41,7 +41,23 @@ function compraSoja(){
                           `);
 }
 
+function compraBlue(){
+  inputPesos = dolarBlue * inputDolar;
+  precioFinal = inputPesos;
+  precioFinal = precioFinal.toFixed(2);
+  $(".dolar-final").html(`
+  <ul>
+    <li> Precio ingresado: US$ ${inputDolar}             </li>
+    <li> <strong> Precio final en pesos: $ ${precioFinal} </strong>           </li>
+    <li> Dólar Blue hoy ${date} (venta): $ ${dolarBlue}    </li>
+  </ul>
+                          `);
+}
+
 function compraOnlinePesos(){
+
+  ultimaConversionPesos();
+
   impuestos();
   precioFinal = parseFloat(inputPesos) + parseFloat(precioImpuestoPais) + parseFloat(precioGanancias);
   redondeo();
@@ -51,6 +67,22 @@ function compraOnlinePesos(){
     <li> Impuesto país (30%): $ ${precioImpuestoPais}    </li>
     <li> Retención ganancias (35%): $ ${precioGanancias} </li>
     <li> <strong> Precio final en pesos: $ ${precioFinal} </strong>        </li>
+  </ul>
+  `);
+  
+  localStorage.setItem("ultInpPesos", inputPesos);
+  localStorage.setItem("ultImpPesos", precioImpuestoPais);
+  localStorage.setItem("ultGanPesos", precioGanancias);
+  localStorage.setItem("ultFinPesos", precioFinal);
+}
+
+function ultimaConversionPesos(){
+  $(".ult").html(`
+  <ul>
+    <li> Precio ingresado: $ ${localStorage.getItem("ultInpPesos")}                               </li>
+    <li> Impuesto país (30%): $ ${localStorage.getItem("ultImpPesos")}                            </li>
+    <li> Retención ganancias (35%): $ ${localStorage.getItem("ultGanPesos")}                      </li>
+    <li> <strong> Precio final en pesos: $ ${localStorage.getItem("ultFinPesos")} </strong>       </li>
   </ul>
   `);
 }

@@ -45,7 +45,7 @@ $("#calcular-dolar").click(function () {
                 compraSoja();
                 break;
             case "blue":
-                console.log("Blue");
+                compraBlue();
                 break;
         }
         }
@@ -57,8 +57,5 @@ $("#calcular-pesos").click(function () {
     compraOnlinePesos();
 })
 
-
-
-
-
+ultimaConversionPesos();
 
