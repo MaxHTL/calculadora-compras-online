@@ -1,7 +1,4 @@
-
 // Variables ==============================================================================
-let datoDolar = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
-
 let inputPesos;
 let inputDolar;
 let precioFinal;
@@ -16,12 +13,12 @@ let outputText;
 let impuestoPais = 0.30;
 let retencionGanancias = 0.35;
 
-// ========================================================================================
-
 // Fecha de hoy ===========================================================================
 var today = new Date();
 var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-// ========================================================================================
+
+// API Dolar ==============================================================================
+let datoDolar = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
 
 $.get(datoDolar, function (datos) {
   dolarOficial  = datos[0].casa.venta.replace(/,/g, '.');
@@ -58,9 +55,6 @@ $("#calcular-pesos").click(function () {
 
     inputPesos = $('#input-pesos').val();
     compraOnlinePesos();
-
-    
-
 })
 
 

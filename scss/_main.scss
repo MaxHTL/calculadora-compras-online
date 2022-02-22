@@ -64,3 +64,19 @@ label{
     border-radius: 4px;
     display: none;
 }
+
+#calcular-dolar{
+    color: white;
+    background-color: rgba(8, 143, 8, 0.486);
+    &:hover{
+        background-color: rgba(0, 70, 0, 0.747);
+    }
+}
+
+#calcular-pesos{
+    color: white;
+    background-color: lightblue;
+    &:hover{
+        background-color: rgb(77, 143, 165);
+    }
+}
